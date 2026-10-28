@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build all",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Action", "build"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Run lab 1",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Action", "lab1"],
+      "problemMatcher": ["$gcc"],
+      "presentation": { "focus": true, "panel": "dedicated" }
+    },
+    {
+      "label": "Run lab 2",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Action", "lab2"],
+      "problemMatcher": ["$gcc"],
+      "presentation": { "focus": true, "panel": "dedicated" }
+    },
+    {
+      "label": "Test all",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Action", "test"],
+      "group": "test",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Benchmark",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Action", "benchmark"],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Build debug",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/build.ps1", "-Configuration", "Debug"],
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

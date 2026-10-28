@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug lab 1",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/lab1.exe",
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Program Files/CodeBlocks/MinGW/bin/gdb.exe",
+      "preLaunchTask": "Build debug"
+    },
+    {
+      "name": "Debug lab 2",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/lab2.exe",
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Program Files/CodeBlocks/MinGW/bin/gdb.exe",
+      "preLaunchTask": "Build debug"
+    }
+  ]
+}

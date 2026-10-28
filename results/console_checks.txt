@@ -1,0 +1,4 @@
+PASS lab1 console scenario
+PASS lab2 console scenario
+PASS actual file save/load through menu
+PASS EOF handling in both consoles
